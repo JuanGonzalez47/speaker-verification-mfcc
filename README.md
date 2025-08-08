@@ -1,8 +1,8 @@
-🔊 Speaker Verification System with MFCCs and Cosine Distance
+# 🔊 Speaker Verification System with MFCCs and Cosine Distance
 
 A speaker verification system developed in a Google Colab notebook using Python. This project determines whether an audio sample belongs to a pre-enrolled "genuine" speaker or an "impostor." It implements a complete audio processing and machine learning pipeline from scratch, based on spectro-temporal feature extraction.
 
-🚀 Open the Project in Google Colab
+# 🚀 Open the Project in Google Colab
 
 The easiest way to explore and run this project is through Google Colab. Click the badge below to open the notebook:
 https://drive.google.com/drive/folders/1Ec72USQx-ec_2H2RIY5xFbwJt4xKq5tg?usp=sharing
@@ -14,14 +14,14 @@ To run this notebook successfully, you must have the audio dataset available in 
 - Connect to Drive in Colab: When you open the notebook, the first few code cells will be for mounting your Google Drive. Run these cells and follow the prompts to authorize the connection.
 - Important: Make sure the file paths used throughout the notebook match the location where you stored the dataset in your Drive.
   
-🎯 Project Objective
+# 🎯 Project Objective
 
 The primary goal is to build a voice biometric model capable of:
 
 - Enrollment: Learning the unique vocal characteristics of a target speaker from several voice samples to create a reference "voiceprint" vector.
 - Verification: Comparing a new audio sample against the reference voiceprint to decide if the voice belongs to the genuine speaker.
   
-🔬 Implemented Methodology
+# 🔬 Implemented Methodology
 
 The system represents each audio file as a single, 156-dimension feature vector. The workflow is illustrated below:
 
@@ -38,7 +38,7 @@ The process is divided into the following key steps:
 - The similarity between two vectors is measured using cosine distance, which is robust to variations in recording volume as it measures orientation rather than magnitude.
 - Classification (Speaker vs. Impostor): An optimal decision threshold is established by finding the intersection point of the distance distributions for genuine and impostor audios (minimizing classification errors). If a new audio's cosine distance to the reference vector is less than the threshold, it is classified as the Genuine Speaker. Otherwise, it's classified as an Impostor.
 
-🛠️ Tech Stack
+# 🛠️ Tech Stack
 - Language: Python
 - Core Libraries:
   - librosa: For audio processing (loading, resampling, MFCC extraction).
@@ -47,10 +47,10 @@ The process is divided into the following key steps:
   - scipy: For finding the optimal threshold (e.g., using Brent's method).
   - matplotlib & seaborn: For visualizing the distance distributions.
     
-👥 Author
+# 👥 Author
 
 Juan Pablo González Blandón
 
-📄 License
+# 📄 License
 
 This project is licensed under the MIT License. See the LICENSE file for more details.
